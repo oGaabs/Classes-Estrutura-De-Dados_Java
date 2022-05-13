@@ -153,8 +153,8 @@ public class Pilha <X> implements Cloneable
     {
         int ret=666/*qualquer positivo*/;
 
-        ret = ret*7/*primo*/ + new Integer(this.ultimo        ).hashCode();
-        ret = ret*7/*primo*/ + new Integer(this.tamanhoInicial).hashCode();
+        ret = ret*7/*primo*/ + Integer.valueOf(this.ultimo        ).hashCode();
+        ret = ret*7/*primo*/ + Integer.valueOf(this.tamanhoInicial).hashCode();
 
         for (int i=0; i<this.ultimo; i++)
             ret = ret*7/*primo*/ + this.elemento[i].hashCode();
